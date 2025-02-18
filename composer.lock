@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9f30a5c95a91113ab6cc4075b5074dd2",
+    "content-hash": "be4d0872d457873a09ddbc97cbe26fe2",
     "packages": [
         {
             "name": "2tvenom/cborencode",
@@ -26547,6 +26547,30 @@
                 }
             ],
             "time": "2024-08-07T17:03:09+00:00"
+        },
+        {
+            "name": "hyva-themes/hyva-ui",
+            "version": "2.5.0",
+            "source": {
+                "type": "git",
+                "url": "git@gitlab.hyva.io:hyva-themes/ui/hyva-ui.git",
+                "reference": "f3d0b21bcaea5bd6b7d6e996ea8e8cadc45d2225"
+            },
+            "suggest": {
+                "hyva-themes/magento2-default-theme": "*"
+            },
+            "type": "magento2-theme",
+            "license": [
+                "See LICENSE.md or https://hyva.io/license"
+            ],
+            "authors": [
+                {
+                    "name": "Hyvä Themes B.V.",
+                    "email": "info@hyva.io"
+                }
+            ],
+            "description": "Hyvä UI Components",
+            "time": "2025-01-10T09:58:57+00:00"
         },
         {
             "name": "laminas/laminas-diactoros",

@@ -67,6 +67,7 @@
         "dealerdirect/phpcodesniffer-composer-installer": "^0.7 || ^1.0",
         "dg/bypass-finals": "^1.4",
         "friendsofphp/php-cs-fixer": "^3.22",
+        "hyva-themes/hyva-ui": "^2.5",
         "lusitanian/oauth": "^0.8",
         "magento/magento-coding-standard": "*",
         "magento/magento2-functional-testing-framework": "^4.7",
@@ -93,6 +94,10 @@
     "minimum-stability": "stable",
     "prefer-stable": true,
     "repositories": {
+        "hyva-themes/hyva-ui": {
+            "type": "git",
+            "url": "git@gitlab.hyva.io:hyva-themes/ui/hyva-ui.git"
+        },
         "hyva-themes/magento2-mollie-theme-bundle": {
             "type": "git",
             "url": "git@gitlab.hyva.io:hyva-themes/hyva-compat/magento2-mollie-theme-bundle.git"

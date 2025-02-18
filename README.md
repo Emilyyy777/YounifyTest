@@ -2,4 +2,5 @@
 
 - Commit 1 - Install Magento and Sample data
 - Commit 2 - Install Hyva Theme
-- Commit 3 - Create Hyva Child Theme
+- Commit 3 - Create Hyva child Theme
+- Commit 4 - Installed Hyva UI components, added header/C-stacked
