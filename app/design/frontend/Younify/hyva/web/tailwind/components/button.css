@@ -27,7 +27,7 @@
     }
 
     .btn-primary {
-        @apply bg-primary text-white shadow-md;
+        @apply bg-tiger-red text-white shadow-md;
 
         &:hover {
             @apply bg-primary-lighter text-white shadow-lg;

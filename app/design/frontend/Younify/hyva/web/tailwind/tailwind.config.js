@@ -41,7 +41,8 @@ module.exports = hyvaModules.mergeTailwindConfig({
         },
         green: colors.emerald,
         yellow: colors.amber,
-        purple: colors.violet
+        purple: colors.violet,
+        'tiger-red':'#fc8368',
       },
       textColor: {
         orange: colors.orange,
