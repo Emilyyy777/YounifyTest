@@ -42,5 +42,8 @@
         <referenceBlock name="top.container">
             <block name="header-usps" template="Magento_Theme::html/header/usps.phtml" before="-"/>
         </referenceBlock>
-    </body>
+        <container name="footer-newsletter" htmlTag="div" htmlClass="footer-newsletter"/>
+        <move element="footer-newsletter" destination="footer" before="-" />
+        <move element="form.subscribe" destination="footer-newsletter" />
+</body>
 </page>

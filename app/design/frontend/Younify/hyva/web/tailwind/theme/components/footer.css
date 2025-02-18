@@ -1,1 +1,8 @@
 /* .page-footer {} */
+.footer {
+    @apply bg-container-darker;
+    .footer-newsletter {
+        @apply container py-8 mx-auto ;
+    }
+}
+
