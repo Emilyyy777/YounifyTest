@@ -1563,9 +1563,8 @@ select {
 
 .btn-primary:hover {
   --tw-bg-opacity: 1;
-  background-color: rgb(37 99 235 / var(--tw-bg-opacity));
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
+  background-color: rgb(252 131 104 / var(--tw-bg-opacity));
+  opacity: 0.75;
   --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
@@ -1671,9 +1670,8 @@ select {
 
 .actions-toolbar .primary button:hover {
   --tw-bg-opacity: 1;
-  background-color: rgb(37 99 235 / var(--tw-bg-opacity));
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
+  background-color: rgb(252 131 104 / var(--tw-bg-opacity));
+  opacity: 0.75;
   --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
@@ -2001,6 +1999,52 @@ also replace `custom` with your own mode name.
   font-weight: 400;
   --tw-text-opacity: 1;
   color: rgb(107 114 128 / var(--tw-text-opacity));
+}
+
+/* USPS BLOCK */
+
+.usps-row[data-content-type='row'] > div {
+  padding: 0px;
+}
+
+.usps-row[data-content-type='row'] > div .usps-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.usps-row[data-content-type='row'] > div .usps-container .usps-block {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+.usps-row[data-content-type='row'] > div .usps-container .usps-block span {
+  font-weight: 100;
+  --tw-text-opacity: 1;
+  color: rgb(107 114 128 / var(--tw-text-opacity));
+}
+
+.usps-row[data-content-type='row'] > div .usps-container .usps-block .side {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.usps-row[data-content-type='row'] > div .usps-container .usps-block .side svg {
+  --tw-text-opacity: 1;
+  color: rgb(252 131 104 / var(--tw-text-opacity));
+}
+
+.usps-row[data-content-type='row'] > div .usps-container .usps-block .side p {
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.usps-row[data-content-type='row'] > div .usps-container .first {
+  border-right-width: 2px;
+}
+
+.usps-row[data-content-type='row'] > div .usps-container .second {
+  padding-left: 0.75rem;
 }
 
 .wishlist-widget .price-box .price-label,
@@ -2656,9 +2700,8 @@ a.pagebuilder-button-primary, button.pagebuilder-button-primary, div.pagebuilder
 
 a.pagebuilder-button-primary:hover, button.pagebuilder-button-primary:hover, div.pagebuilder-button-primary:hover {
   --tw-bg-opacity: 1;
-  background-color: rgb(37 99 235 / var(--tw-bg-opacity));
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
+  background-color: rgb(252 131 104 / var(--tw-bg-opacity));
+  opacity: 0.75;
   --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
@@ -3309,16 +3352,20 @@ a.pagebuilder-button-secondary:focus, button.pagebuilder-button-secondary:focus,
   top: 0px;
 }
 
-.top-full {
-  top: 100%;
-}
-
 .top-2 {
   top: 0.5rem;
 }
 
+.top-full {
+  top: 100%;
+}
+
 .isolate {
   isolation: isolate;
+}
+
+.-z-10 {
+  z-index: -10;
 }
 
 .z-0 {
@@ -3339,10 +3386,6 @@ a.pagebuilder-button-secondary:focus, button.pagebuilder-button-secondary:focus,
 
 .z-50 {
   z-index: 50;
-}
-
-.-z-10 {
-  z-index: -10;
 }
 
 .order-1 {
@@ -3786,16 +3829,16 @@ a.pagebuilder-button-secondary:focus, button.pagebuilder-button-secondary:focus,
   height: 100%;
 }
 
+.max-h-full {
+  max-height: 100%;
+}
+
 .max-h-screen {
   max-height: 100vh;
 }
 
 .max-h-screen-75 {
   max-height: 75vh;
-}
-
-.max-h-full {
-  max-height: 100%;
 }
 
 .min-h-14 {
@@ -3951,6 +3994,10 @@ a.pagebuilder-button-secondary:focus, button.pagebuilder-button-secondary:focus,
   max-width: 56rem;
 }
 
+.max-w-\[var\(--gallery-width\)\] {
+  max-width: var(--gallery-width);
+}
+
 .max-w-full {
   max-width: 100%;
 }
@@ -3969,10 +4016,6 @@ a.pagebuilder-button-secondary:focus, button.pagebuilder-button-secondary:focus,
 
 .max-w-xl {
   max-width: 36rem;
-}
-
-.max-w-\[var\(--gallery-width\)\] {
-  max-width: var(--gallery-width);
 }
 
 .flex-1 {
@@ -4051,13 +4094,13 @@ a.pagebuilder-button-secondary:focus, button.pagebuilder-button-secondary:focus,
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.translate-y-full {
-  --tw-translate-y: 100%;
+.translate-y-12 {
+  --tw-translate-y: 3rem;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.translate-y-12 {
-  --tw-translate-y: 3rem;
+.translate-y-full {
+  --tw-translate-y: 100%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -4617,6 +4660,10 @@ a.pagebuilder-button-secondary:focus, button.pagebuilder-button-secondary:focus,
   background-color: rgb(226 232 240 / var(--tw-bg-opacity));
 }
 
+.bg-transparent {
+  background-color: transparent;
+}
+
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
@@ -4633,10 +4680,6 @@ a.pagebuilder-button-secondary:focus, button.pagebuilder-button-secondary:focus,
 .bg-yellow-500 {
   --tw-bg-opacity: 1;
   background-color: rgb(245 158 11 / var(--tw-bg-opacity));
-}
-
-.bg-transparent {
-  background-color: transparent;
 }
 
 .bg-opacity-100 {
@@ -4663,15 +4706,15 @@ a.pagebuilder-button-secondary:focus, button.pagebuilder-button-secondary:focus,
   background-image: linear-gradient(to top, var(--tw-gradient-stops));
 }
 
-.from-white {
-  --tw-gradient-from: #fff var(--tw-gradient-from-position);
-  --tw-gradient-to: rgb(255 255 255 / 0) var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-}
-
 .from-black\/60 {
   --tw-gradient-from: rgb(0 0 0 / 0.6) var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(0 0 0 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.from-white {
+  --tw-gradient-from: #fff var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(255 255 255 / 0) var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
@@ -4679,12 +4722,12 @@ a.pagebuilder-button-secondary:focus, button.pagebuilder-button-secondary:focus,
   fill: rgb(0 0 0 / 0.2);
 }
 
-.fill-current {
-  fill: currentColor;
-}
-
 .fill-black\/30 {
   fill: rgb(0 0 0 / 0.3);
+}
+
+.fill-current {
+  fill: currentColor;
 }
 
 .stroke-current {
@@ -5157,6 +5200,10 @@ a.pagebuilder-button-secondary:focus, button.pagebuilder-button-secondary:focus,
   color: rgb(55 65 81 / var(--tw-text-opacity));
 }
 
+.text-primary\/50 {
+  color: rgb(31 41 55 / 0.5);
+}
+
 .text-red {
   --tw-text-opacity: 1;
   color: rgb(239 68 68 / var(--tw-text-opacity));
@@ -5192,17 +5239,13 @@ a.pagebuilder-button-secondary:focus, button.pagebuilder-button-secondary:focus,
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.text-white\/50 {
+  color: rgb(255 255 255 / 0.5);
+}
+
 .text-yellow-400 {
   --tw-text-opacity: 1;
   color: rgb(251 191 36 / var(--tw-text-opacity));
-}
-
-.text-primary\/50 {
-  color: rgb(31 41 55 / 0.5);
-}
-
-.text-white\/50 {
-  color: rgb(255 255 255 / 0.5);
 }
 
 .underline {
@@ -5344,14 +5387,14 @@ a.pagebuilder-button-secondary:focus, button.pagebuilder-button-secondary:focus,
   transition-property: none;
 }
 
-.transition-transform {
-  transition-property: transform;
+.transition-opacity {
+  transition-property: opacity;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
 
-.transition-opacity {
-  transition-property: opacity;
+.transition-transform {
+  transition-property: transform;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
@@ -6066,14 +6109,14 @@ fieldset ~ fieldset {
   color: rgb(31 41 55 / var(--tw-text-opacity));
 }
 
-.hover\:text-yellow-500:hover {
-  --tw-text-opacity: 1;
-  color: rgb(245 158 11 / var(--tw-text-opacity));
-}
-
 .hover\:text-white:hover {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.hover\:text-yellow-500:hover {
+  --tw-text-opacity: 1;
+  color: rgb(245 158 11 / var(--tw-text-opacity));
 }
 
 .hover\:underline:hover {
@@ -6220,12 +6263,12 @@ fieldset ~ fieldset {
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
 }
 
-.disabled\:opacity-75:disabled {
-  opacity: 0.75;
-}
-
 .disabled\:opacity-30:disabled {
   opacity: 0.3;
+}
+
+.disabled\:opacity-75:disabled {
+  opacity: 0.75;
 }
 
 .group:hover .group-hover\:scale-110 {
@@ -6610,6 +6653,10 @@ fieldset ~ fieldset {
     scroll-snap-align: none;
   }
 
+  .md\:grid-cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+
   .md\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -6624,10 +6671,6 @@ fieldset ~ fieldset {
 
   .md\:grid-cols-\[42\%_minmax\(0\2c _1fr\)\] {
     grid-template-columns: 42% minmax(0, 1fr);
-  }
-
-  .md\:grid-cols-1 {
-    grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 
   .md\:grid-rows-\[min-content_minmax\(0\2c _1fr\)\] {
@@ -6787,20 +6830,20 @@ fieldset ~ fieldset {
     left: var(--msrp-inline-offset);
   }
 
-  .lg\:right-auto {
-    right: auto;
-  }
-
-  .lg\:top-\[var\(--msrp-block-offset\)\] {
-    top: var(--msrp-block-offset);
-  }
-
   .lg\:right-6 {
     right: 1.5rem;
   }
 
+  .lg\:right-auto {
+    right: auto;
+  }
+
   .lg\:top-6 {
     top: 1.5rem;
+  }
+
+  .lg\:top-\[var\(--msrp-block-offset\)\] {
+    top: var(--msrp-block-offset);
   }
 
   .lg\:order-1 {

@@ -33,3 +33,33 @@
         }
     }
 }
+/* USPS BLOCK */
+.usps-row[data-content-type='row'] > div {
+    @apply p-0;
+    .usps-container {
+        @apply flex justify-between;
+        .usps-block {
+            @apply flex flex-col w-full;
+            span {
+                @apply text-gray-500 font-thin;
+            }
+            .side {
+                @apply flex gap-2;
+                svg {
+                    @apply text-tiger-red;
+                }
+                p {
+                    @apply uppercase font-semibold;
+                }
+            }
+        }
+        .first {
+            @apply border-r-2;
+        }
+        .second {
+            @apply pl-3 ;
+        }
+    }
+}
+
+

@@ -30,7 +30,7 @@
         @apply bg-tiger-red text-white shadow-md;
 
         &:hover {
-            @apply bg-primary-lighter text-white shadow-lg;
+            @apply bg-tiger-red opacity-75 shadow-lg;
         }
     }
 
