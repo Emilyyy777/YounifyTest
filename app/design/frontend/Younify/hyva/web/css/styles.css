@@ -3360,6 +3360,10 @@ a.pagebuilder-button-secondary:focus, button.pagebuilder-button-secondary:focus,
   top: 100%;
 }
 
+.-bottom-px {
+  bottom: -1px;
+}
+
 .isolate {
   isolation: isolate;
 }
@@ -4477,6 +4481,11 @@ a.pagebuilder-button-secondary:focus, button.pagebuilder-button-secondary:focus,
   border-width: 2px;
 }
 
+.border-y {
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+}
+
 .border-b {
   border-bottom-width: 1px;
 }
@@ -5248,6 +5257,11 @@ a.pagebuilder-button-secondary:focus, button.pagebuilder-button-secondary:focus,
   color: rgb(251 191 36 / var(--tw-text-opacity));
 }
 
+.text-slate-700 {
+  --tw-text-opacity: 1;
+  color: rgb(51 65 85 / var(--tw-text-opacity));
+}
+
 .underline {
   text-decoration-line: underline;
 }
@@ -5932,6 +5946,17 @@ fieldset ~ fieldset {
 
 /* Apple Pay end */
 
+@media (min-width: 1280px) {
+  .xl\:btn-size-lg {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+}
+
 .backdrop\:bg-black\/75::backdrop {
   background-color: rgb(0 0 0 / 0.75);
 }
@@ -6064,6 +6089,11 @@ fieldset ~ fieldset {
   background-color: rgb(29 78 216 / 0.1);
 }
 
+.hover\:bg-blue-700:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(29 78 216 / var(--tw-bg-opacity));
+}
+
 .hover\:text-black:hover {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
@@ -6134,6 +6164,12 @@ fieldset ~ fieldset {
 .hover\:shadow-sm:hover {
   --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
   --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.hover\:shadow-lg:hover {
+  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
@@ -6233,9 +6269,19 @@ fieldset ~ fieldset {
   --tw-ring-color: rgb(239 68 68 / var(--tw-ring-opacity));
 }
 
+.focus\:ring-blue-200:focus {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(191 219 254 / var(--tw-ring-opacity));
+}
+
 .active\:bg-gray-100:active {
   --tw-bg-opacity: 1;
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
+}
+
+.active\:bg-blue-700:active {
+  --tw-bg-opacity: 1;
+  background-color: rgb(29 78 216 / var(--tw-bg-opacity));
 }
 
 .active\:text-gray-500:active {
@@ -6246,6 +6292,12 @@ fieldset ~ fieldset {
 .active\:text-gray-700:active {
   --tw-text-opacity: 1;
   color: rgb(55 65 81 / var(--tw-text-opacity));
+}
+
+.active\:shadow:active {
+  --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 .active\:ring-0:active {
@@ -6263,12 +6315,32 @@ fieldset ~ fieldset {
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
 }
 
+.disabled\:bg-slate-600:disabled {
+  --tw-bg-opacity: 1;
+  background-color: rgb(71 85 105 / var(--tw-bg-opacity));
+}
+
+.disabled\:text-slate-50:disabled {
+  --tw-text-opacity: 1;
+  color: rgb(248 250 252 / var(--tw-text-opacity));
+}
+
 .disabled\:opacity-30:disabled {
   opacity: 0.3;
 }
 
 .disabled\:opacity-75:disabled {
   opacity: 0.75;
+}
+
+.disabled\:opacity-70:disabled {
+  opacity: 0.7;
+}
+
+.disabled\:shadow-none:disabled {
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 .group:hover .group-hover\:scale-110 {
@@ -6286,12 +6358,42 @@ fieldset ~ fieldset {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.data-\[sticky\=false\]\:translate-y-0[data-sticky="false"] {
+  --tw-translate-y: 0px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .data-\[active\]\:border-primary[data-active] {
   --tw-border-opacity: 1;
   border-color: rgb(29 78 216 / var(--tw-border-opacity));
 }
 
+.data-\[sticky\=true\]\:border-transparent[data-sticky="true"] {
+  border-color: transparent;
+}
+
+.data-\[sticky\=false\]\:opacity-100[data-sticky="false"] {
+  opacity: 1;
+}
+
+.data-\[sticky\=true\]\:shadow-2xl[data-sticky="true"] {
+  --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
 @media (min-width: 640px) {
+  .sm\:not-sr-only {
+    position: static;
+    width: auto;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+  }
+
   .sm\:order-1 {
     order: 1;
   }
@@ -6792,6 +6894,11 @@ fieldset ~ fieldset {
     line-height: 1.25rem;
   }
 
+  .md\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
   .md\:opacity-0 {
     opacity: 0;
   }
@@ -7145,4 +7252,34 @@ fieldset ~ fieldset {
     font-size: 1rem;
     line-height: 1.5rem;
   }
+
+  .xl\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
+.\[\&_\.price-label\]\:sr-only .price-label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.\[\&_\.price-wrapper\]\:text-inherit .price-wrapper {
+  color: inherit;
+}
+
+.\[\&_\.price-wrapper\]\:\[font-size\:inherit\] .price-wrapper {
+  font-size: inherit;
+}
+
+.\[\&_\:is\(input\2c select\2c textarea\)\]\:scroll-my-36 :is(input,select,textarea) {
+  scroll-margin-top: 9rem;
+  scroll-margin-bottom: 9rem;
 }

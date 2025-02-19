@@ -19,5 +19,25 @@
                 </arguments>
             </block>
         </referenceBlock>
+        <referenceContainer name="main.content">
+            <block
+                class="Magento\Catalog\Block\Product\View"
+                name="product.info.addtocart.sticky"
+                template="Magento_Catalog::product/view/addtocart-sticky.phtml"
+                after="columns"
+            >
+                <arguments>
+                    <argument name="mobile_only" xsi:type="boolean">true</argument> <!-- Hide the Sticky.ATC on desktop -->
+                    <argument name="truncate_title" xsi:type="boolean">true</argument> <!-- Don't allow the title to wrap -->
+                    <argument name="only_show_after_add_to_cart" xsi:type="boolean">true</argument> <!-- Only show after passing the ATC btn -->
+                </arguments>
+                <block
+                    class="Magento\Catalog\Block\Product\Price"
+                    name="product.info.price.sticky"
+                    template="Magento_Catalog::product/view/price.phtml"
+                    as="price"
+                />
+            </block>
+        </referenceContainer>
     </body>
 </page>
